@@ -1,0 +1,19 @@
+USE db_visual_rak
+
+SELECT 
+    f.*, 
+	v.CLASSI_VEI AS CATEGORIA,
+	vei.numvei AS PLACA,
+	rm.NOMMOT AS MOTORISTA
+
+FROM 
+    PBI_INDICADORES_BI f
+LEFT JOIN 
+    PBI_RODVEI_ABA vei ON vei.codvei = f.FROTA
+LEFT JOIN 
+    VRMON_VEICULO v ON v.CODVEI = f.FROTA
+LEFT JOIN 
+    RODMOT rm ON f.CODMOT = rm.CODMOT
+
+
+WHERE     YEAR(f.DATA) = 2025 AND MONTH(f.DATA) = 8;
