@@ -1,0 +1,5 @@
+use db_visual_rak
+
+select  CODCON, OBSCON, DATCAD, CTEDCN, FREPES, 
+USUATU from vw_fatcan_cte 
+WHERE YEAR(DATCAD) = '2025' AND MONTH(DATCAD) = '8' AND DAY(DATCAD) = '12';
