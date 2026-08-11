@@ -1,7 +1,0 @@
-use db_visual_rak;
-
-SELECT a.*, v.SITUAC  FROM PBI_RODVEI_ABA a
-
-LEFT JOIN RODVEI v ON v.CODVEI = a.codvei
-
-WHERE VINCULO = 'Próprio' and SITUAC = '1'  ORDER BY a.numvei ;
